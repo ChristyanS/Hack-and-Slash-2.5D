@@ -1,1 +1,1 @@
-# -Prototipo-Rouguelite 2.5D
+# Prototipo-Rouguelite 2.5D
