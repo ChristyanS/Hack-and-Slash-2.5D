@@ -22,6 +22,17 @@ A few motivating and useful examples of how your product can be used. Spice this
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
+### Animação Parado
+![Animação Parado](https://i.ibb.co/dD8dg9Q/ezgif-com-video-to-gif.gif)
+### Animação movimento
+![Animação movimento](https://i.ibb.co/d0sqCXQ/ezgif-com-video-to-gif-1.gif)
+### Animação Pulo
+![Animação Pulo](https://i.ibb.co/CKqKnzy/ezgif-com-video-to-gif-2.gif)
+### Animação Ataque
+![Animação Ataque](https://i.ibb.co/GMmJ05n/ezgif-com-video-to-gif-3.gif)
+
+
+
 ## Development setup
 
 Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
