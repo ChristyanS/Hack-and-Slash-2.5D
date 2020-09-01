@@ -1,25 +1,19 @@
-# Prototipo
+# Protótipo
 
-> Prototipo de um lolpoly, hack-n-slash 2.5D e roguelite game .
+> Protótipo de um lolpoly, hack-n-slash 2.5D e roguelite game .
 
 [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=plastic&logo=unity)](https://unity3d.com)
 
-One to two paragraph statement about your product and what it does.
+Declaração de um a dois parágrafos sobre seu produto e o que ele faz.
 
 ![Prototipo Image](https://i.ibb.co/3YTmVqw/driaths.png)
 
-## Installation
-
-OS X & Linux:
-
-```sh
-npm install my-crazy-module --save
-```
+## Instalação
 
 Windows:
 
 ```sh
-edit autoexec.bat
+install process
 ```
 
 ## Usage example
@@ -37,18 +31,8 @@ make install
 npm test
 ```
 
-## Release History
+## Histórico de Releases
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
 * 0.0.1
     * Work in progress
 
