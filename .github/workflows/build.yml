@@ -17,7 +17,7 @@ jobs:
         
         # Build Windows and OSX
         - name: Build Windows Player
-          run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -logFile -projectPath . -buildWindows64Player ./bin-win/CISample.exe    
+          run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -logFile -projectPath . -buildWindows64Player ./bin-win/CISample.exe    
         
         - name: Archive Windows Build
           uses: actions/upload-artifact@v1
