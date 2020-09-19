@@ -3,9 +3,9 @@
 /workspace.xml
 # Rider ignored files
 /modules.xml
-/.idea.Constantes.iml
-/projectSettingsUpdater.xml
 /contentModel.xml
+/.idea.Hack-and-Slash-2.5D.iml
+/projectSettingsUpdater.xml
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
