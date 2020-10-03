@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2020-09-20 00:08:57Z" end-time="2020-09-20 00:08:57Z" duration="0,0636408">
+  <test-suite type="TestSuite" id="1008" name="Prototype" fullname="Prototype" runstate="Runnable" testcasecount="2" result="Passed" start-time="2020-09-20 00:08:57Z" end-time="2020-09-20 00:08:57Z" duration="0.063641" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1012" name="EditorMode.dll" fullname="C:/Users/T-Gamer/Documents/GitHub/Hack-and-Slash-2.5D/Library/ScriptAssemblies/EditorMode.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2020-09-20 00:08:57Z" end-time="2020-09-20 00:08:57Z" duration="0.051050" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="12604" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <test-suite type="TestSuite" id="1013" name="Tests" fullname="Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2020-09-20 00:08:57Z" end-time="2020-09-20 00:08:57Z" duration="0.049672" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestFixture" id="1009" name="Teste" fullname="Tests.Teste" classname="Tests.Teste" runstate="Runnable" testcasecount="2" result="Passed" start-time="2020-09-20 00:08:57Z" end-time="2020-09-20 00:08:57Z" duration="0.043133" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1010" name="TesteSimplePasses" fullname="Tests.Teste.TesteSimplePasses" methodname="TesteSimplePasses" classname="Tests.Teste" runstate="Runnable" seed="1766821216" result="Passed" start-time="2020-09-20 00:08:57Z" end-time="2020-09-20 00:08:57Z" duration="0.006071" asserts="0">
+            <properties />
+          </test-case>
+          <test-case id="1011" name="TesteWithEnumeratorPasses" fullname="Tests.Teste.TesteWithEnumeratorPasses" methodname="TesteWithEnumeratorPasses" classname="Tests.Teste" runstate="Runnable" seed="945179443" result="Passed" start-time="2020-09-20 00:08:57Z" end-time="2020-09-20 00:08:57Z" duration="0.012294" asserts="0">
+            <properties>
+              <property name="_JOINTYPE" value="UnityCombinatorial" />
+            </properties>
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
