@@ -17,11 +17,7 @@ jobs:
           
         # Build Windows and OSX
         - name: Build Windows Player
-          run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -noUpm -logFile -projectPath . -buildWindows64Player ./bin-win64/Game.exe || exit 0
-
-        # Run unit tests
-        - name: Unit test
-          run: /opt/Unity/Editor/Unity -runTests -batchmode -projectPath . -testPlatform editmode -logFile
+          run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -noUpm -logFile -projectPath . -buildWindows64Player ./bin-win64/Game.exe
         
         - name: Archive Windows Build
           uses: actions/upload-artifact@v1
