@@ -17,7 +17,7 @@ jobs:
        
         # Unit Tests
         - name: Unit Tests	
-          run: /opt/Unity/Editor/Unity -runTests -batchmode -projectPath . -testResults .github/results.xml -testPlatform PS4 --nographics
+          run: /opt/Unity/Editor/Unity -runTests -batchmode -projectPath . -testPlatform playmode --nographics
 
         # Build Windows and OSX	
         - name: Build Windows Player	
