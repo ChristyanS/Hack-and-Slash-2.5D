@@ -1,8 +1,6 @@
 name: Actions 😎
 
 on: [push]
-env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
 jobs:
   build:
@@ -27,7 +25,6 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          projectPath: path/to/your/project
           unityVersion: 2020.1.0f1
 
       # Build
