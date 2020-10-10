@@ -16,7 +16,7 @@ jobs:
           run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -logFile -manualLicenseFile .github/Unity_v2020.x.ulf || exit 0	
 
         - name: Unit test
-          run: /opt/Unity/Editor/Unity -batchmode -projectPath . -runTests -testPlatform editmode -logFile -testResults ./unit-tests.xml
+          run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -logFile -projectPath . -runTests -testResults ./unit-tests.xml
           
         # Build Windows and OSX	
         - name: Build Windows Player	
