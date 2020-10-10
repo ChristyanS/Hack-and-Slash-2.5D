@@ -1,0 +1,19 @@
+  
+name: Teste
+on: [push]	
+jobs:	
+  build:
+    name: Build my project ✨
+    runs-on: ubuntu-latest
+    steps:	
+        - name: Checkout Project	
+          uses: actions/checkout@v2
+      
+        - name: Unity - Test runner
+          uses: webbertakken/unity-test-runner@v1.7
+          env:
+            UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          with:
+           customParameters: -nographics
+           unityVersion: 2020.1.0f1
+      
