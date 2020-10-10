@@ -14,10 +14,15 @@ jobs:
         # Activate unity	
         - name: Activate Unity	
           run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -logFile -manualLicenseFile .github/Unity_v2020.x.ulf || exit 0	
+       
+        # Unit Tests
+        - name: Unit Tests	
+          run: /opt/Unity/Editor/Unity -runTests -batchmode -projectPath . -testResults .github/results.xml -testPlatform PS4 --nographics
 
         # Build Windows and OSX	
         - name: Build Windows Player	
           run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -noUpm -logFile -projectPath . -buildWindows64Player ./bin-win64/Game.exe
+        
 
         - name: Archive Windows Build	
           uses: actions/upload-artifact@v1	
