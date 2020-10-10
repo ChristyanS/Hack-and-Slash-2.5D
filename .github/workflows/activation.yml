@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Request manual activation file
         id: getManualLicenseFile
-        uses: webbertakken/unity-activate@v1.3
+        uses: webbertakken/unity-request-activation-file@v1.2
         with:
           unityVersion: 2020.1.0f1
       - name: Expose as artifact
