@@ -12,7 +12,8 @@ namespace Tests
         [Test]
         public void NewTestScriptSimplePasses()
         {
-            // Use the Assert class to test conditions
+            Assert.That(2 + 2 == 5);
+
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
@@ -20,8 +21,8 @@ namespace Tests
         [UnityTest]
         public IEnumerator NewTestScriptWithEnumeratorPasses()
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
+            Assert.That(2 + 2 == 5);
+
             yield return null;
         }
     }
