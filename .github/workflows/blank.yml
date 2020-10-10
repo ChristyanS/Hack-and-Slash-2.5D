@@ -18,11 +18,6 @@ jobs:
         # Build Windows and OSX	
         - name: Build Windows Player	
           run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -noUpm -logFile -projectPath . -buildWindows64Player ./bin-win64/Game.exe	|| exit 0
-        # Output
-        - uses: actions/upload-artifact@v2
-          with:
-              name: erro
-              path: ./Runtime/Utilities/Argv.cpp
 
         - name: Archive Windows Build	
           uses: actions/upload-artifact@v1	
