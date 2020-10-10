@@ -14,7 +14,7 @@ jobs:
         - uses: actions/upload-artifact@v1
           with:
             name: Test results
-            path: artifacts
+            path: .github/Unity_v2020.x.ulf
 
         # Activate unity	
         - name: Activate Unity	
