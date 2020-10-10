@@ -14,5 +14,6 @@ jobs:
           env:
             UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           with:
+           customParameters: '-nographics'
            unityVersion: 2020.1.0f1
       
