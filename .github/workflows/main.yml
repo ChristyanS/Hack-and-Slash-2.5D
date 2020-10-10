@@ -16,4 +16,10 @@ jobs:
           with:
            customParameters: -nographics
            unityVersion: 2020.1.0f1
+           
+        - name: Unity - Builder
+          uses: webbertakken/unity-builder@v1.4
+          with:
+            unityVersion: 2020.1.0f1
+            targetPlatform: StandaloneWindows64
       
