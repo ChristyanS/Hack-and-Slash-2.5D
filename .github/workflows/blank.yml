@@ -14,15 +14,6 @@ jobs:
         # Activate unity	
         - name: Activate Unity	
           run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -logFile -manualLicenseFile .github/Unity_v2020.x.ulf || exit 0	
-
-        - name: Unit test
-          run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -logFile -projectPath . -runTests -testResults ./unit-tests.xml -testPlatform playmode
-          
-        - name: Archive Test Result	
-          uses: actions/upload-artifact@v1	
-          with:	
-            name: Test
-            path: ./unit-tests.xml
           
         # Build Windows and OSX	
         - name: Build Windows Player	
