@@ -9,13 +9,13 @@ jobs:
         - name: Checkout Project	
           uses: actions/checkout@v2
       
-        - name: Unity - Test runner
-          uses: webbertakken/unity-test-runner@v1.7
-          env:
-            UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          with:
-           customParameters: -nographics
-           unityVersion: 2020.1.0f1
+        #- name: Unity - Test runner
+          #uses: webbertakken/unity-test-runner@v1.7
+          #env:
+          #  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+         # with:
+        #   customParameters: -nographics
+       #    unityVersion: 2020.1.0f1
            
         - name: Unity - Builder
           uses: webbertakken/unity-builder@v1.4
