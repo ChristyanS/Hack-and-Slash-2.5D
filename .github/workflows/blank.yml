@@ -23,6 +23,9 @@ jobs:
         with:
           path: Library
           key: Library
+          
+      - name: Unity - Request Activation File
+        uses: webbertakken/unity-request-activation-file@v1.2
 
       # Test
       - name: Run tests
