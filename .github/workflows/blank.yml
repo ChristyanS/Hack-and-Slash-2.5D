@@ -18,6 +18,12 @@ jobs:
         - name: Unit test
           run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -logFile -projectPath . -runTests -testResults ./unit-tests.xml
           
+        - name: Archive Test Result	
+          uses: actions/upload-artifact@v1	
+          with:	
+            name: Test
+            path: ./unit-tests.xml
+          
         # Build Windows and OSX	
         - name: Build Windows Player	
           run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -noUpm -logFile -projectPath . -buildWindows64Player ./bin-win64/Game.exe
