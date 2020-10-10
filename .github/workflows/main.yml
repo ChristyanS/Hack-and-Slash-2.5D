@@ -19,9 +19,6 @@ jobs:
         with:
            customParameters: -nographics
            unityVersion: 2020.1.0f1
-     
-      - name: Clean Test Output
-        run: rm -rf ${{ steps.testRunner.outputs.artifactsPath }}
            
       - name: Unity - Builder
         uses: webbertakken/unity-builder@v1.4
