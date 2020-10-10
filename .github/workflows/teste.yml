@@ -1,7 +1,5 @@
-name: NewCI
+name: Build	
 on: [push]	
-env:
- UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 jobs:	
   build:
     name: Build my project ✨
@@ -12,6 +10,8 @@ jobs:
       
         - name: Unity - Test runner
           uses: webbertakken/unity-test-runner@v1.7
+          env:
+            UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           with:
            projectPath: .
            unityVersion: 2020.1.0f1
