@@ -1,22 +1,20 @@
 name: Test project
 on: [push]
 jobs:
-  testRunnerInEditMode:
-    name: Test edit mode 📝
+  requestActivationFile:
     runs-on: ubuntu-latest
-    env:
-      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}   
     steps:
-      # Checkout repository (required to test local actions)
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Activate license
+      - name: Request manual activation file
         uses: MirrorNG/unity-runner@2.0.0
+        id: getManualLicenseFile
         with:
-          entrypoint: /activate.sh
+            entrypoint: /request_activation.sh
 
-      - name: Run tests
-        uses: MirrorNG/unity-runner@2.0.0
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v1
         with:
-          args: -runTests -projectPath .
+            name: Manual Activation File
+            path: ${{ steps.getManualLicenseFile.outputs.filePath }}
