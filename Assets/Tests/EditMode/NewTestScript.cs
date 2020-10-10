@@ -12,7 +12,6 @@ namespace Tests
         [Test]
         public void NewTestScriptSimplePasses()
         {
-            Assert.That(2 + 2 == 5);
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use

@@ -12,7 +12,6 @@ namespace Tests
         [Test]
         public void NewTestScriptSimplePasses()
         {
-            Assert.That(2 + 2 == 5);
 
         }
 
@@ -21,8 +20,6 @@ namespace Tests
         [UnityTest]
         public IEnumerator NewTestScriptWithEnumeratorPasses()
         {
-            Assert.That(2 + 2 == 5);
-
             yield return null;
         }
     }
