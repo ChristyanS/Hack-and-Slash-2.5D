@@ -11,11 +11,12 @@ jobs:
        with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis 
      - name: Sonarscanner for dotnet
-       uses: Secbyte/dotnet-sonarscanner@v1.2
+       uses: MirrorNG/unity-sonarscanner@1.0.1
        with:
          buildCommand: dotnet build .
          testCommand: dotnet test .
          projectKey: "ChristyanS_Hack-and-Slash-2.5D"
+         sonarOrganisation: "christyansantos"
          beginArguments: /d:sonar.verbose="true"
        env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
