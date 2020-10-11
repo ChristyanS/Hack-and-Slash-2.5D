@@ -1,5 +1,4 @@
-﻿using System;
-using Behaviours.Singleton;
+﻿using Behaviours.Singleton;
 using UnityEngine;
 
 namespace Behaviours.Controller
