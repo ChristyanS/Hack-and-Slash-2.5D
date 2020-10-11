@@ -1,24 +1,23 @@
-name: Sonar
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    types: [opened, synchronize, reopened]
-jobs:
+name: Build
+on: [push]	
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+jobs:	
   build:
-    name: Build
+    name: Build my project ✨
     runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
+    steps:	
+      - name: Checkout repository
+        uses: actions/checkout@v2
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Cache SonarCloud packages
-        uses: actions/cache@v1
+          lfs: true
+ 
+      - name: Active Cache
+        uses: actions/cache@v1.1.0
         with:
-          path: ~\sonar\cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
+          path: Library
+          key: Library
+
       - name: Cache SonarCloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v1
@@ -26,24 +25,38 @@ jobs:
           path: .\.sonar\scanner
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
+          
       - name: Install SonarCloud scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: powershell
         run: |
           New-Item -Path .\.sonar\scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+          
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: .\.sonar\scanner\dotnet-sonarscanner begin /k:"ChristyanS_Hack-and-Slash-2.5D" /o:"christyansantos" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-        
+      
+      - name: Unity - Builder
+        uses: webbertakken/unity-builder@v1.4
+        with:
+          allowDirtyBuild: true
+          unityVersion: 2020.1.0f1
+          targetPlatform: StandaloneWindows64
+          customParameters: -nographics
+          
       - name: Build 2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
-        run: .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-    
-    
+        run: .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}":  :  
+      
+      - name: Upload Build
+        uses: actions/upload-artifact@v1
+        with:
+          name: Build
+          path: build
