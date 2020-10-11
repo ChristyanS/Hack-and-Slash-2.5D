@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# file: ~/.gitignore_global
+.DS_Store
+.idea
