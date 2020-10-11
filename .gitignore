@@ -22,6 +22,10 @@
 # Visual Studio cache directory
 .vs/
 
+#Ignore all .meta file
+*.meta
+
+
 # Gradle cache directory
 .gradle/
 
