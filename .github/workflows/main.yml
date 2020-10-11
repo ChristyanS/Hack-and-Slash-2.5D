@@ -1,5 +1,5 @@
   
-name: Teste
+name: Build
 on: [push]	
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
