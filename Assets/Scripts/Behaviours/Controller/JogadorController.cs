@@ -9,7 +9,6 @@ namespace Behaviours.Controller
         public GameObject chao;
         public BoxCollider sword;
         public bool estaMachucado;
-
         public void Start()
         {
             Rigidbody = GetComponent<Rigidbody>();
