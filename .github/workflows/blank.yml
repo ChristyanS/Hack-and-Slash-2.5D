@@ -24,7 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo $secrets.UNITY_LICENSE
+      - name: Descriptografar grandes segredos
+        run: ./.github/scripts/decrypt_secret.sh
+        env:
+          LARGE_SECRET_PASSPHRASE: ${{ secrets.UNITY_LICENSE }}
+      # Este comando é apenas um exemplo para mostrar seu segredo sendo impresso
+      # Certifique-se de remover quaisquer declarações impressas de seus segredos. O GitHub
+      # não oculta segredos que usam essa alternativa.
+      - name: Test printing your secret (Remove this step in production)
+        run: cat $HOME/secrets/my_secret.json
