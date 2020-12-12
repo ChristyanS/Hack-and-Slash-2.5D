@@ -31,7 +31,6 @@ jobs:
           unityVersion: 2020.1.0f1
           versioning: Semantic
           targetPlatform: StandaloneWindows64
-          customParameters: -nographics
           allowDirtyBuild : true 
       
       - name: Upload Build
