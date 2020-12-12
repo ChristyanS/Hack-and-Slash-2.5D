@@ -32,6 +32,7 @@ jobs:
           versioning: Semantic
           targetPlatform: StandaloneWindows64
           customParameters: -nographics
+          allowDirtyBuild : true 
       
       - name: Upload Build
         uses: actions/upload-artifact@v1
